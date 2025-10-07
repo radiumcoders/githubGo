@@ -1,10 +1,9 @@
 package main
 
-import "github.com/radiumcoders/githubGo/switchCase"
-
-
+import (
+	arrayslices "github.com/radiumcoders/githubGo/array_slices"
+)
 
 func main() {
-	switchCase.SimpleSwitch()
-	switchCase.MultiSwitch()	
+	arrayslices.ArraySlices()
 }
