@@ -1,7 +1,7 @@
 package funcs
 
 import "errors"
-
+// its recommended to use a struct for error handling
 type ReturnValue struct {
 	Result int
 	Error  error
