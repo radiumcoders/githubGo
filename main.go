@@ -1,9 +1,16 @@
 package main
 
 import (
-	arrayslices "github.com/radiumcoders/githubGo/array_slices"
+	"fmt"
+
+	"github.com/radiumcoders/githubGo/funcs"
 )
 
 func main() {
-	arrayslices.ArraySlices()
+	rv := funcs.Multiplication(12, 0)
+	if rv.Error != nil {
+		fmt.Println("Error:", rv.Error)
+	} else {
+		fmt.Println("Result:", rv.Result)
+	}
 }
