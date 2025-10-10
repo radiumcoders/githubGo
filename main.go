@@ -1,10 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"strconv"
-	// "github.com/radiumcoders/githubGo/funcs"
+	maps "github.com/radiumcoders/githubGo/maps_loops"
+	"github.com/radiumcoders/githubGo/pointers"
 )
+
+// "github.com/radiumcoders/githubGo/funcs"
 
 func main() {
 	// var a float32 = 10.0
@@ -15,15 +16,17 @@ func main() {
 	// } else {
 	// 	fmt.Println("Result:", rv.Result)
 	// }
-	a := 12
-	fmt.Println(a)
-	// converting int to string don't give error
-	b := strconv.Itoa(a)
-	fmt.Println("Result:", b)
-	// converting string to int
-	c , err := strconv.Atoi(b)
-	if err != nil {
-		fmt.Println("Error:", err)
-	}
-	fmt.Println(c)
+	// a := 12
+	// fmt.Println(a)
+	// // converting int to string don't give error
+	// b := strconv.Itoa(a)
+	// fmt.Println("Result:", b)
+	// // converting string to int
+	// c , err := strconv.Atoi(b)
+	// if err != nil {
+	// 	fmt.Println("Error:", err)
+	// }
+	// fmt.Println(c)
+	pointers.PointerExample()
+	maps.Maps()
 }
