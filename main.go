@@ -1,6 +1,6 @@
 package main
 
-import "github.com/radiumcoders/githubGo/enums"
+import "github.com/radiumcoders/githubGo/channels"
 
 // "fmt"
 // "os"
@@ -15,5 +15,12 @@ func main() {
 	// fmt.Fprintf(w, "%s\t%t\t%t\t%t\t", td[0].Title, td[0].Completed, td[0].CreatedAt, td[0].UpdatedAt)
 	// w.Flush()
 	// interfaces.InterfaceExample()
-	enums.Enums()
+	// enums.Enums()
+	// gricks.G()
+	// start := time.Now()
+	// defer func() {
+	// 	fmt.Printf("the time it took: %v\n", time.Since(start))
+	// }()
+	// goroutines.Gorutiner()
+	channels.ChannelExample()
 }
