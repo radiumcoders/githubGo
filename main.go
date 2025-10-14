@@ -1,6 +1,6 @@
 package main
 
-import "github.com/radiumcoders/githubGo/interfaces"
+import "github.com/radiumcoders/githubGo/enums"
 
 // "fmt"
 // "os"
@@ -14,5 +14,6 @@ func main() {
 	// w := tabwriter.NewWriter(os.Stdout, 0, 0, padding, ' ', 0)
 	// fmt.Fprintf(w, "%s\t%t\t%t\t%t\t", td[0].Title, td[0].Completed, td[0].CreatedAt, td[0].UpdatedAt)
 	// w.Flush()
-	interfaces.InterfaceExample()
+	// interfaces.InterfaceExample()
+	enums.Enums()
 }
