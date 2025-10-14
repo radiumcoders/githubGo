@@ -8,25 +8,28 @@ import (
 
 func HelprCFunc(numChan chan int, wg *sync.WaitGroup) {
 	defer wg.Done()
-	fmt.Println("Helper function called", <- numChan)
+	fmt.Println("Helper function called", <-numChan)
 }
 
-func AddChan(numChan chan int, num1 int , num2 int , wg *sync.WaitGroup){
+// func AddChan(numChan chan int, num1 int , num2 int , wg *sync.WaitGroup){
+func AddChan(numChan chan int, num1 int, num2 int) {
 	result := num1 + num2
 	numChan <- result
-	wg.Done()
+	// wg.Done() no need to call as it's alredy blocking
 }
 
-func ChannelExample(){
-	var wg sync.WaitGroup
+func ChannelExample() {
+	// var wg sync.WaitGroup
 	numChan := make(chan int)
-	wg.Add(1)
+	// wg.Add(1)
 	num1 := rand.Intn(100)
 	num2 := rand.Intn(100)
-	go AddChan(numChan, num1, num2, &wg)
+	// go AddChan(numChan, num1, num2, &wg)
+	go AddChan(numChan, num1, num2)
 	// go HelprCFunc(numChan, &wg)
 	// numChan <- 435
-	res := <- numChan
+	res := <-numChan
 	fmt.Println(res)
-	wg.Wait()
+	close(numChan)
+	// wg.Wait()
 }
